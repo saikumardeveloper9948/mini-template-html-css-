@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TEMPLATE</title>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <style>
+      *{
+        box-sizing: border-box;
+      }
+      body{
+        padding: 0px ;
+        margin: 0px;
+        overflow-x: hidden;
+       
+      }
+      .nav_bar {
+        display: flex;
+        justify-content: space-around;
+        background-color: black;
+        height: 14vh;
+        width: 100vw;
+        top: 0;
+        color: #fff;
+        position: sticky;
+        z-index: 1;
+      }
+      .item1 {
+        display: flex;
+        margin: 2%;
+      }
+      .journey {
+        margin-top: -15px;
+      }
+      .menu-icon{
+        padding-top: 20px;
+      }
+      .icon{
+        color:#fff;
+        font-size: 30px;
+      }
+      .santhosh{
+        display: none;
+      }
+      .dropdown-content .two:hover {background-color: #0dec10;}
+
+      .menu-icon:hover .dropdown-content {display: block;}
+       
+      /* .menu-icon:hover .icon {background-color:rgb(0, 234, 255); } */
+
+      .dropdown-content{
+        display: none;
+        position: relative;
+        background-color: #eef0c4;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      }
+      .dropdown-content a{
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      .body1 {
+        position: relative;
+        display: grid;
+        justify-content: center;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url(./banner.jpg);
+        background-size: cover;
+        width: 100vw;
+        padding: 20%;
+        
+
+      }
+      .heading1 {
+        text-align: center;
+       
+        color: white;
+      }
+      .svg1 {
+        margin-top: -40px;
+        animation-name: arrow;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+      }
+      @keyframes arrow{
+        50%{transform: translateY(20px);}
+      }
+      label {
+        color: rgb(60, 0, 255);
+        font-weight: bold;
+      }
+      .form1 {
+        text-align: center;
+        background-size: cover;
+        opacity: 0.9;
+        
+      }
+      .form1a {
+        position: relative;
+        text-align: center;
+        padding: 12% 1%;
+        box-shadow: 0 0 20px yellow;
+        background-color: #fff;
+      }
+      select,
+      input {
+        margin: 10px;
+      }
+      .location {
+        /* width: 23vw; */
+        padding: 5px;
+      }
+      input[type="submit"] {
+        background-color: #6e48f7;
+        border: none;
+        color: #fff;
+        /* padding: 15px 30px; */
+        padding: 5%;
+        text-decoration: none;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+      input {
+        border: none;
+        outline: none;
+        border-bottom: 2px solid red;
+      }
+      select {
+        border: none;
+        outline: none;
+      }
+      select:focus {
+        border: 2px solid rgb(13, 247, 91);
+      }
+      .container3 {
+        background-color: aquamarine;
+        width: 100vw;
+        padding-bottom: 5%;
+        padding-left: 1%;
+      }
+      .para1 {
+        text-align: center;
+        padding: 6% 1%;
+        font-size: 30px;
+      }
+      .content3 {
+        text-align: center;
+        margin-top: -8%;
+        padding: 3% 10%;
+      }
+      .btn1 {
+        padding: 5%;
+        font-size: 20px;
+        background-color: yellow;
+        font-family: monospace;
+        border: none;
+        border-radius: 50%;
+        box-shadow: 10px 10px red;
+        cursor: pointer;
+      }
+      .btn1:active{
+        border: 4px solid white;
+        font-weight: bold;
+
+      }
+      .btn1a {
+        text-align: center;
+      }
+      .image1 {
+        width: 100vw;
+      }
+      .most {
+        font-size: 30px;
+      }
+      .desc1 {
+        background-color: rgb(255, 205, 239);
+        width: 100vw;
+        text-align: center;
+        padding-bottom: 5%;
+        padding-top: 5%;
+        margin-top: -1%;
+      }
+      .btn2 {
+        background-color: rgb(66, 124, 136);
+        color: #fff;
+        padding: 2% 2%;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        border: none;
+        cursor: pointer;
+        /* box-shadow: 10px 10px red; */
+      }
+      .btn2:hover{
+        background-color: aqua;
+        font-weight: bold;
+        color: red;
+        transform: scale(1.2);
+      }
+      .btn2:active{
+        border:5px solid black;
+      }
+      .desc2 {
+        text-align: center;
+        width: 100vw;
+        padding: 6% 0%;
+        margin-top: -1%;
+        background-color: bisque;
+      }
+      .desc3 {
+        text-align: center;
+        width: 100vw;
+        padding: 6% 0%;
+        margin-top: -1%;
+        background-color: rgb(223, 218, 136);
+      }
+      .places-locations {
+        background-color: aqua;
+        width: 100vw;
+        padding: 6% 0%;
+      }
+      .location-one,
+      .location-two {
+        padding: 20% 0%;
+      }
+      .place1 {
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        text-align: center;
+      }
+      .place2 {
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        text-align: center;
+      }
+      .image2 {
+        width: 60vw;
+        height: 26vh;
+        border-top-left-radius:40px ;
+      }
+      .description {
+        /* background-color: #6e48f7; */
+
+        width: 100vw;
+        display: grid;
+        gap: 1%;
+        padding-top: 6%;
+        padding-bottom: 60%;
+        justify-content: center;
+        padding-left: 1%;
+      }
+      .place-description {
+        padding-left: 15%;
+        background-color: white;
+        border-bottom:10px solid red;
+        border-bottom-width: 10px;
+      }
+      span{
+        color: #fc05aa;
+      }
+      .telangana {
+        align-items: center;
+        width: 60vw;
+        background-color: #fff;
+        box-shadow: 0 0 10px;
+        border-bottom-right-radius: 40px;
+        border-top-left-radius:40px ;
+      }
+      .place-price {
+        background-color: aquamarine;
+        text-align: center;
+        padding: 5%;
+        border-bottom-right-radius: 40px;
+      }
+      .cash{
+        /* background-color: #ec0d7c; */
+        color: #fff;
+        border-radius: 50%;
+        animation-name: example;
+        /* margin-top: -20px; */
+        animation-duration:3s;
+        animation-iteration-count:infinite;
+      }
+      @keyframes example {
+        0%   {background-color: rgb(236, 83, 83); color: #fff;}
+        25%  {background-color: rgb(244, 244, 49); color: black;}
+        50%  {background-color: rgb(84, 17, 241) ; color:white ;}
+        100% {background-color: rgb(60, 253, 22); color: blue;}
+      }
+      .place-price div {
+        cursor: pointer;
+      }
+      button {
+        border: none;
+        outline: none;
+      }
+      .places:hover{
+        background-color: aqua;
+        border: 3px solid black;
+        color: black;
+        border-radius: 50%;
+      }
+      .places {
+        margin-top:20px;
+        /* text-align: center; */
+        background-color: rgb(241, 22, 161);
+        padding: 5%;
+        color: white;
+        cursor: pointer;
+      }
+      .btn3{
+        text-align: center;
+      }
+      .rakesh{
+        animation-name: rakesh ;
+        animation-direction: alternate;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        color: red;
+
+      }
+      @keyframes rakesh {
+        0%{transform: translateX(50px);}
+      }
+      .reviews {
+        background-color: rgb(144, 176, 231);
+        text-align: center;
+        color: #fff;
+        width: 100vw;
+        padding-bottom: 2%;
+        padding-top: 2%;
+        padding-right: 1%;
+        padding-left: 1%;
+
+      }
+      .person1{
+        border: 2px solid;
+        border-radius: 20px;
+        padding-top: 5px;
+        background-color: #797cd6;
+        margin: 20px;
+      }
+      .pic1 {
+        width: 20vw;
+        height: 10vh;
+        border-radius: 50%;
+        background-color: red;
+        box-shadow: 0 0 20px  rgb(195, 255, 0);
+      }
+      .container{
+        border: 2px solid;
+        text-align: center;
+      }
+      .contact-us{
+        text-align: center;
+      }
+      .footer{
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        padding-left: 20px;
+      }
+      .contact{
+        background-color: aqua;
+        text-align: center;
+        padding: 1px 15px ;
+        width: 100vw;
+      }
+      @media screen and (min-width:600px) and (max-width:2560px) {
+        .icon{
+          display: none;
+        }
+        .santhosh {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background-color: #161616; */
+        overflow: hidden;
+        /* transform: scale(1.5); */
+}
+
+/* button */
+.btn {
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  color: #FFF;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 12px;
+}
+.btn::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+/* glow */
+.btn::before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #FF0000, #FF7300, #FFFB00, #48FF00,
+    #00FFD5, #002BFF, #FF00C8, #FF0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 600%;
+  z-index: -1;
+  width: calc(100% + 4px);
+  height:  calc(100% + 4px);
+  filter: blur(8px);
+  animation: glowing 20s linear infinite;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+  opacity: 0;
+}
+
+@keyframes glowing {
+  0% {background-position: 0 0;}
+  50% {background-position: 400% 0;}
+  100% {background-position: 0 0;}
+}
+
+/* hover */
+.btn:hover::before {
+  opacity: 1;
+}
+
+.btn:active:after {
+  background: transparent;
+}
+
+.btn:active {
+  color: #000;
+  font-weight: bold;
+}
+.balu{
+   display: flex;
+   position: relative;
+   justify-content:center;
+   /* border: 2px solid;
+}
+  .place-details{
+   /* position: absolute; */
+   /* text-align: left !important; */
+   margin-left: -50vw;
+   width: 50vw !important;
+   height: 46vh !important;
+}
+.ramappa{
+   position: absolute;
+   top: 11vh;
+   left: 40vw  ;
+   text-align: left;
+   width: 55vw !important;
+   height: auto !important;
+   padding-left: 7% !important;
+   padding-top: 1% !important;
+   padding-bottom: 1%;
+}
+.rajeswara{
+   position: absolute;
+   width: 55vw !important;
+   height: auto!important;
+   padding-left: 7% !important;
+   padding-top: 1% !important;
+   padding-bottom: 1%;
+ }
+ .raju{
+   width: 50vw !important;
+   height: 46vh !important;
+   margin-right:-122vw ;
+ }
+ .temple{
+   position: absolute;
+   width: 55vw !important;
+   height: auto!important;
+   text-align: left;
+   padding-left: 7% !important;
+   padding-top: 1% !important;
+   padding-bottom: 1%;
+   margin-left: -40vh !important;
+   top:12vh ;
+ }
+ .menu-icon:hover .dropdown-content {
+   display: none;
+ }
+ .description{
+   height: auto !important;
+   /* background-color: #002BFF; */
+   padding-bottom:25vh;
+ }
+ .telangana {
+   display:flex;
+   align-items: center;
+   width: 85vw;
+   height: 40vh !important;
+   background-color: #fff;
+   box-shadow: 0 0 10px;
+ }
+
+
+ .place-money{
+   width: 25vw !important;
+   height: 40vh !important;
+   padding-top: 15%;
+ }
+ .image2 {
+   width: 35vw !important;
+   height: 40vh !important;
+   margin-top: 2px !important;
+   /* border:2PX SOLID #0dec10; */
+ }
+ .place-description {
+   padding-left: 8% !important;
+   height: 40VH;
+   width: 40vw !important;
+
+
+ .money{
+   font-size: 20px !important;
+ }
+ .reviews{
+   /* margin-right: 10px; */
+   padding-right: 5%;
+ }
+ .reviews-block{
+   display: grid;
+   grid-template-columns: 30vw 30vw 30vw ; 
+  justify-content: space-evenly !important;
+  align-items: center !important;
+  padding-bottom: 2%;
+  /* width: ;  */
+ }
+ .person1{
+   text-align: center;
+   width: 30vw !important;
+ }
+ .pic1{
+   width: 10vw !important;
+ }
+ .cash{
+   text-align: center !important;
+   padding:15% !important;
+ }
+ }
+    </style>
+  </head>
+  <body>
+    <div class="nav_bar">
+      <div class="item1">
+        <div><img src="./logo.png" alt="logo" /></div>
+        <div class="journey">
+          <h1>
+            <i><b>JOURNEY</b></i>
+          </h1>
+        </div>
+      </div>
+      <div class="menu-icon">
+        <ion-icon class="icon" name="menu"></ion-icon>
+          <div class="dropdown-content">
+             <div class="one"> <a class="two" href="#body1">Home</a> </div>
+             <div class="one"> <a class="two" href="#places">places</a> </div>
+             <div class="one"> <a class="two" href="#reviews">Reviews</a></div>
+             <div class="one"> <a class="two" href="#whatsapp">Contact</a></div>                        
+          </div>
+      </div>
+      <div class="santhosh">
+        <a href="#body1"> <button class="btn">HOME</button></a>
+        <a href="#places">    <button class="btn">Places</button></a>
+        <a href="#reviews">    <button class="btn">Reviews</button></a>
+        <a href="#whatsapp">    <button class="btn">Contact</button></a>
+       </div>  
+    </div>
+    <div class="body1" id="body1">
+      <div class="heading1">
+        <h1
+          style="
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+              'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+          "
+        >
+          LET'S BEGIN
+        </h1>
+        <div><b>|</b></div>
+        <p style="font-family: 'Times New Roman', Times, serif">
+          <i>We assist you the best</i>
+        </p>
+        <svg
+          class="svg1"
+          width="150px"
+          height="150px"
+          viewBox="-64 -64 192.00 192.00"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          aria-hidden="true"
+          role="img"
+          class="iconify iconify--emojione"
+          preserveAspectRatio="xMidYMid meet"
+          fill="#000000"
+          stroke="#000000"
+          stroke-width="0.00064"
+        >
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></g>
+          <g id="SVGRepo_iconCarrier">
+            <circle cx="32" cy="32" r="30" fill="#4fd1d9"></circle>
+            <path
+              fill="#ffffff"
+              d="M16 33.7L32 49l16-15.3H37.4V15H27.1v18.7z"
+            ></path>
+          </g>
+        </svg>
+      </div>
+      <div class="form1">
+        <form action="" class="form1a">
+          <label for="fname">Choose Your Destination </label><br />
+          <input
+            class="location"
+            type="text"
+            id="fname"
+            name="fname"
+            placeholder="enter location"/>
+          <br />
+          <label for="lname">How many rooms?</label> <br />
+          <select name="rooms" id="one">
+            <option value="">~select~</option>
+            <option value="">room1</option>
+            <option value="">room2</option>
+            <option value="">room3</option>
+            <option value="">room4</option>
+            <option value="">room5</option>
+            <option value="">room6</option>
+            <option value="">room7</option>
+            <option value="">room8</option>
+            <option value="">room9</option>
+          </select>
+          <br />
+          <label for="lname">Adults</label> <br />
+          <select name="rooms" id="one">
+            <option value="">1</option>
+            <option value="">2</option>
+            <option value="">3</option>
+            <option value="">4</option>
+            <option value="">5</option>
+            <option value="">6</option>
+            <option value="">7</option>
+            <option value="">8</option>
+            <option value="">9</option>
+            <option value="">10</option>
+          </select>
+          <br />
+          <label for="lname">Children</label> <br />
+          <select name="rooms" id="one">
+            <option value="">0</option>
+            <option value="">1</option>
+            <option value="">2</option>
+            <option value="">3</option>
+            <option value="">4</option>
+            <option value="">5</option>
+            <option value="">6</option>
+            <option value="">7</option>
+            <option value="">8</option>
+            <option value="">9</option>
+          </select>
+          <br />
+          <label for="lname">Check In Date</label> <br />
+          <input type="date" id="lname" name="lname" placeholder="Check in" />
+          <br />
+          <label for="">Check Out Date</label> <br />
+          <input type="date" id="lname" name="lname" placeholder="collapse" />
+          <br />
+          <input class="check" type="submit" value="Check Availability" />
+        </form>
+      </div>
+    </div>
+    <div class="container3">
+      <div class="para1">YOUR JOURNEY IS OUR PRIORITY</div>
+      <div>
+        <p class="content3">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+          delectus rem rerum, blanditiis voluptatem enim ipsa minus iure
+          adipisci aut. Quia dignissimos id voluptates laborum.
+        </p>
+      </div>
+      <a href="https://warangaltourism.in/warangal-tour-packages"><div class="btn1a"><button class="btn1">CONTINUE EXPLORE</button></div></a>
+    </div>
+    <div id="places">
+      <div class="balu">  
+         <div class="gallery1 "  >
+           <a target="_blank" href="#">
+             <img class="image1 place-details" src="https://www.insightsonindia.com/wp-content/uploads/2021/07/ICOMOS.jpg" alt="Cinque Terre" />
+           </a>
+         </div>
+        <div class="desc1 ramappa">
+          <div class="most">Ramappa Temple</div>
+          <p class="wgl">
+            Tourist attractions of Ramappa Temple, Ramappa lake, and Laknavaram lake are located in Mulugu distrtict. Jampanna vagu (stream) and Dayyala vagu (stream) flow in this district and there are few water falls in this district.
+          </p>
+          <a href="https://www.tripadvisor.in/HotelsNear-g735768-d3705184-Ramappa_Temple-Warangal_Warangal_Urban_District_Telangana.html"><div class="btn1b"><button class="btn2">KNOW MORE..</button></div></a>
+        </div>
+      </div> 
+      <div class="balu">
+        <div class="gallery2 ">
+          <a target="_blank" href="#">
+            <img class="image1 raju" src="https://www.trawell.in/admin/images/upload/224164711Vemulawada_RajaRajeshwara_Temple_Main.jpg" alt="Cinque Terre" />
+          </a>
+        </div>
+        <div class="desc2 temple">
+          <div class="most ">Raja Rajeswara Temple</div>
+          <p class="wgl">
+            The temple is thronged by thousands of devotees during festivals especially Shivarathri. Rock cut inscriptions found in and around Vemulawada Temple establish the historical importance of capital of the Vemulawada Chalukyas.
+          </p>
+          <a href="https://vemulawadatemple.telangana.gov.in/"><div class="btn1b"><button class="btn2">VIEW MORE..</button></div></a>
+        </div>
+      </div>
+      <div class="balu">  
+        <div class="gallery3">
+          <a target="_blank" href="#">
+            <img class="image1 place-details" src="https://bogatha.feriadoresorts.com/wp-content/uploads/2024/06/Bogatha-falls.webp">
+          </a>
+        </div>
+        <div class="desc3 ramappa">
+          <div class="most">Bogatha Waterfall</div>
+          <p class="wgl">
+            It is a waterfall located on the Cheekupally stream, Wazeedu Mandal, Mulugu district, Telangana. It is located 120 kilometers from Bhadrachalam, 90 kilometers from Mulugu and 140 kilometers from Warangal.
+          </p>
+          <a href="https://www.zingbus.com/blog/bogatha-waterfalls/"><div class="btn1b" id="btn1b"><button class="btn2">CONTINUE EXPLORE</button></div></a>
+        </div>
+      </div>  
+      </div>  
+    <div class="description">
+      <div class="telangana">
+        <div class="place-image">
+          <img class="image2 " src="https://uniquelytelangana.in/wp-content/uploads/2023/06/sammakka-saralamma-temple.jpg" alt="" />
+        </div>
+        <div class="place-description">
+          <h3 >Medaram Jathara</h3>
+          <span >MULUGU</span>
+          <p class="Singapore">
+            A little festival of tribal origin in Telangana has become a major pilgrimage. The Medaram Jathara is held every two years at in Medaram Village.
+          </p>
+        </div>
+        <div class="place-price place-money">
+          <button class="money cash">10000/-</button>
+          <!-- <div>know more..</div> -->
+        </div>
+      </div>
+      
+      <div class="telangana">
+        <div class="place-image">
+          <img class="image2" src="https://telugu.newsmeter.in/h-upload/2023/03/10/341160-efforts-on-to-upgrade-warangal-kakatiya-zoo-park-from-small-to-medium-category.webp" alt="" />
+        </div>
+        <div class="place-description">
+          <h3 style="color:rgb(51, 0, 255) ">Kakatiya Zoological Park</h3>
+          <span>WARANGAL</span>
+          <p class="Singapore">
+            The Kakatiya Zoological Park was established in 16-01-1985,  and named it as “Vana Vignan Kendra”.
+          </p>
+        </div>
+        <div class="place-price place-money">
+          <button class="money cash">5000/-</button>
+          <!-- <div>know more..</div> -->
+        </div>
+      </div>
+      <div class="telangana">
+        <div class="place-image">
+          <img class="image2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQksVfsWPrDGujOu8H612da90czDFZkUHEfCQ&s">
+        </div>
+        <div class="place-description">
+          <h3>Pandavula Gutta</h3>
+          <span>REGONDA</span>
+          <p class="Singapore">
+            Rock art is a form of landscape art, which is found only in certain regions of India. Telangana is home to many prehistoric habitation sites.
+          </p>
+        </div>
+        <div class="place-price place-money">
+          <button class="money cash">5000/-</button>
+          <!-- <div>know more..</div> -->
+        </div>
+      </div>
+      <div class="telangana">
+        <div class="place-image">
+          <img class="image2" src="https://www.newstap.in/h-upload/2022/08/13/1402534-medigadda-barrage.web" alt="barrage" />
+        </div>
+        <div class="place-description">
+          <h3 style="color:rgb(130, 148, 37)">Medigadda Barrage</h3>
+          <span>BHUPLALAPALLY</span>
+          <p class="Singapore">
+            The Lakshmi Barrage, also known as the Medigadda Barrage. It is to utilize Godavari water for drinking and irrigation.
+          </p>
+        </div>
+        <div class="place-price place-money">
+          <button class="money cash">8000/-</button>
+          <!-- <div>know more..</div> -->
+        </div>
+      </div>
+      <div class="telangana">
+        <div class="place-image">
+          <img class="image2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAz6QSskZ7rGV5ICuUhU7cIR4sAPGLFtvgww&s" alt="" />
+        </div>
+        <div class="place-description">
+          <h3 style="color:rgb(98, 0, 255)">Bhadrakali Temple</h3>
+          <span>  WARANGAL</span>
+          <p class="Singapore">
+            It is located in Warangal. It is near to MGM Hospital Warangal. Tourists can easily reach there.
+          </p>
+        </div>
+        <div class="place-price place-money">
+          <button class="money cash">4000/-</button>
+          <!-- <div>know more..</div> -->
+        </div>
+      </div>
+      <div class="telangana">
+        <div class="place-image">
+          <img class="image2" src="https://saichintala.com/wp-content/uploads/2019/10/img_0010.jpg?w=2000&h=1500&crop=1">
+        </div>
+        <div class="place-description">
+          <h3 style="color:rgb(124, 48, 48)">Mutyala dhara </h3>
+          <span>WATER FALL</span>
+          <p class="Singapore">
+            Veerabhadram which is the base village for falls is 5kms past venkatapuram. Once you reach the village the trekking path starts. 
+          </p>
+        </div>
+        <div class="place-price place-money">
+          <button class="money cash">9000/-</button>
+          <!-- <div>know more..</div> -->
+        </div>
+      </div>
+      <div class="telangana">
+        <div class="place-image">
+          <img class="image2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScE-A2GMXRCj5K1vlu4i7NiUw7YQa9AIok7g&s" alt="" />
+        </div>
+        <div class="place-description">
+          <h3 style="color:red">Ramappa</h3>
+          <span style="color: rgb(129, 22, 252);">MULUGU</span>
+          <p class="Singapore">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut ipsam
+            tempora nemo asperiores odio. Error?
+          </p>
+        </div>
+        <div class="place-price place-money">
+          <button class="money cash">6000/-</button>
+          <!-- <div>know more..</div> -->
+        </div>
+      </div>
+      <a class="btn3" href="https://www.tourism.telangana.gov.in/home"><button class="places">Show More Places</button></a>
+    </div>
+    <div class="reviews" id="reviews">
+      <h1 class="rakesh">Reviews</h1>
+      <div class="reviews-block">
+      <div class="person1">
+        <div>
+          <img class="pic1" src="./setakka.jpeg" alt=" mla" />
+        </div>
+        <div>
+          <h3 class="h33">Anasurya (MLA)</h3>
+          <div class="stars1" style="color: rgb(0, 255, 8);">
+            <ion-icon class="star" name="star"></ion-icon>
+            <ion-icon class="star" name="star"></ion-icon>
+            <ion-icon class="star" name="star"></ion-icon>
+            <ion-icon class="star" name="star-half"></ion-icon>
+            <ion-icon name="star-outline"></ion-icon>
+          </div>
+        </div>
+        <p>Best travelling service was provided by JOURNEY</p>
+      </div>
+      <div class="person1">
+        <div>
+          <img class="pic1" src="./praneeth.jpg" alt="praneeth" />
+        </div>
+        <div>
+          <h3 class="h33">Rakesh</h3>
+          <div class="stars1" style="color: rgb(0, 255, 8);">
+            <ion-icon class="star" name="star"></ion-icon>
+            <ion-icon class="star" name="star"></ion-icon>
+            <ion-icon class="star" name="star"></ion-icon>
+            <ion-icon class="star" name="star-half"></ion-icon>
+            <ion-icon name="star-outline"></ion-icon>
+          </div>
+        </div>
+        <p>Best travelling service was provided by JOURNEY</p>
+      </div>
+      <div class="person1">
+        <div>
+          <img class="pic1" src="./singer.jpeg" alt="singer" />
+        </div>
+        <div>
+          <h3 class="h33">Narayana</h3>
+          <div class="stars1" style="color: rgb(0, 255, 8);">
+            <ion-icon class="star" name="star"></ion-icon>
+            <ion-icon class="star" name="star"></ion-icon>
+            <ion-icon class="star" name="star"></ion-icon>
+            <ion-icon class="star" name="star"></ion-icon>
+            <ion-icon name="star-outline"></ion-icon>
+          </div>
+        </div>
+        <p>Best travelling service was provided by JOURNEY</p>
+      </div>
+      <div class="person1">
+        <div>
+          <img class="pic1" src="./girl1.jpeg" alt="honey" />
+        </div>
+        <div>
+          <h3 class="h33">Honey</h3>
+          <div class="stars1" style="color: rgb(0, 255, 8);">
+            <ion-icon class="star" name="star"></ion-icon>
+            <ion-icon class="star" name="star"></ion-icon>
+            <ion-icon class="star" name="star"></ion-icon>
+            <ion-icon class="star" name="star"></ion-icon>
+            <ion-icon class="star" name="star"></ion-icon>
+          </div>
+        </div>
+        <p>Best travelling service was provided by JOURNEY</p>
+      </div>
+      <div class="person1">
+        <div>
+          <img class="pic1" src="https://media.licdn.com/dms/image/D4D03AQFAh7L41O3hjg/profile-displayphoto-shrink_200_200/0/1681749005905?e=2147483647&v=beta&t=p84ePCzOz4zZ6gzGIkLvrSIBag1KBIPQBQHedWZxfTI" alt=" CEO" />
+        </div>
+        <div>
+          <h3 class="h33">G. Vamsi krishna (google CEO*)</h3>
+          <div class="stars1" style="color: rgb(0, 255, 8);">
+            <ion-icon class="star" name="star"></ion-icon>
+            <ion-icon class="star" name="star"></ion-icon>
+            <ion-icon class="star" name="star"></ion-icon>
+            <ion-icon class="star" name="star"></ion-icon>
+            <ion-icon class="star" name="star"></ion-icon>
+          </div>
+        </div>
+        <p>Best travelling service Lorem ipsum dolor sit amet consectetur adiwas provided by JOURNEY</p>
+      </div>
+      <div class="person1">
+        <div>
+          <img class="pic1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3rJzhl3zo96Xj2ShL1v1rprrY3P-LA7F06w&s" alt="baby" />
+        </div>
+        <div>
+          <h3 class="h33">Reethu</h3>
+          <div class="stars1" style="color: rgb(0, 255, 8);">
+            <ion-icon class="star" name="star"></ion-icon>
+            <ion-icon class="star" name="star"></ion-icon>
+            <ion-icon class="star" name="star"></ion-icon>
+            <ion-icon class="star" name="star"></ion-icon>
+            <ion-icon class="star" name="star-half"></ion-icon>
+          </div>
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, vitae!provided by JOURNEY</p>
+      </div>
+    </div>
+    </div>
+    <div class="contact-us" id="whatsapp">
+      <h1 style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"><i>CONTACT US</i> </h1>
+      <hr>
+      <!-- <div class="container">
+        <form action="/action_page.php">
+          <label for="fname">Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name.."> <br>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder=" enter mail id.."> <br>
+          <label for="country">State</label>
+          <select id="country" name="country">
+            <option value="australia">select</option>
+            <option value="canada">Andhra</option>
+            <option value="usa">Tamilnadu</option>
+            <option value="australia">Telangana</option>
+            <option value="canada">Kerla</option>
+            <option value="usa">Tripura</option>
+            <option value="australia">Uttar Pradesh</option>
+            <option value="canada">Nagaland</option>
+            <option value="usa">Rajasthan</option>
+          </select> <br>
+      
+          <label for="subject">Subject:</label> <br>
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea> <br>
+      
+          <input type="submit" value="Submit" >
+        </form>
+      </div> -->
+      <div class="footer" >
+        <a href="https://wa.me/+919848737872?text=hello"><svg style="width: 40px; margin-top:-35px" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
+          <path fill="#fff" d="M4.9,43.3l2.7-9.8C5.9,30.6,5,27.3,5,24C5,13.5,13.5,5,24,5c5.1,0,9.8,2,13.4,5.6	C41,14.2,43,18.9,43,24c0,10.5-8.5,19-19,19c0,0,0,0,0,0h0c-3.2,0-6.3-0.8-9.1-2.3L4.9,43.3z"></path><path fill="#fff" d="M4.9,43.8c-0.1,0-0.3-0.1-0.4-0.1c-0.1-0.1-0.2-0.3-0.1-0.5L7,33.5c-1.6-2.9-2.5-6.2-2.5-9.6	C4.5,13.2,13.3,4.5,24,4.5c5.2,0,10.1,2,13.8,5.7c3.7,3.7,5.7,8.6,5.7,13.8c0,10.7-8.7,19.5-19.5,19.5c-3.2,0-6.3-0.8-9.1-2.3	L5,43.8C5,43.8,4.9,43.8,4.9,43.8z"></path><path fill="#cfd8dc" d="M24,5c5.1,0,9.8,2,13.4,5.6C41,14.2,43,18.9,43,24c0,10.5-8.5,19-19,19h0c-3.2,0-6.3-0.8-9.1-2.3	L4.9,43.3l2.7-9.8C5.9,30.6,5,27.3,5,24C5,13.5,13.5,5,24,5 M24,43L24,43L24,43 M24,43L24,43L24,43 M24,4L24,4C13,4,4,13,4,24	c0,3.4,0.8,6.7,2.5,9.6L3.9,43c-0.1,0.3,0,0.7,0.3,1c0.2,0.2,0.4,0.3,0.7,0.3c0.1,0,0.2,0,0.3,0l9.7-2.5c2.8,1.5,6,2.2,9.2,2.2	c11,0,20-9,20-20c0-5.3-2.1-10.4-5.8-14.1C34.4,6.1,29.4,4,24,4L24,4z"></path><path fill="#40c351" d="M35.2,12.8c-3-3-6.9-4.6-11.2-4.6C15.3,8.2,8.2,15.3,8.2,24c0,3,0.8,5.9,2.4,8.4L11,33l-1.6,5.8	l6-1.6l0.6,0.3c2.4,1.4,5.2,2.2,8,2.2h0c8.7,0,15.8-7.1,15.8-15.8C39.8,19.8,38.2,15.8,35.2,12.8z"></path><path fill="#fff" fill-rule="evenodd" d="M19.3,16c-0.4-0.8-0.7-0.8-1.1-0.8c-0.3,0-0.6,0-0.9,0	s-0.8,0.1-1.3,0.6c-0.4,0.5-1.7,1.6-1.7,4s1.7,4.6,1.9,4.9s3.3,5.3,8.1,7.2c4,1.6,4.8,1.3,5.7,1.2c0.9-0.1,2.8-1.1,3.2-2.3	c0.4-1.1,0.4-2.1,0.3-2.3c-0.1-0.2-0.4-0.3-0.9-0.6s-2.8-1.4-3.2-1.5c-0.4-0.2-0.8-0.2-1.1,0.2c-0.3,0.5-1.2,1.5-1.5,1.9	c-0.3,0.3-0.6,0.4-1,0.1c-0.5-0.2-2-0.7-3.8-2.4c-1.4-1.3-2.4-2.8-2.6-3.3c-0.3-0.5,0-0.7,0.2-1c0.2-0.2,0.5-0.6,0.7-0.8	c0.2-0.3,0.3-0.5,0.5-0.8c0.2-0.3,0.1-0.6,0-0.8C20.6,19.3,19.7,17,19.3,16z" clip-rule="evenodd" ></path >
+          </svg></a> <br>
+        
+        <a href="tel:+919848737872" ><ion-icon name="call-outline" style="font-size: 25px;"></ion-icon></a> <br>
+        <a href="mailto:bandisaikunar@gmail.com"> <img src="https://cdn1.iconfinder.com/data/icons/google-new-logos-1/32/gmail_new_logo-512.png" height="30px" width="30px"></a></pre>
+      </div>
+   
+    </div>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30269.855752732172!2d80.02819010993088!3d18.49579618219446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a33010082e53099%3A0x3adfc07009265e80!2sNagaram%2C%20Telangana!5e0!3m2!1sen!2sin!4v1721760950930!5m2!1sen!2sin"
+      width="100%"
+      height="500"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+    <div class="contact">
+      <p><i>Copyright © 2024  Designed by Bandi Saikumar..</i></p>
+    </div>
+  </body>
+</html>
